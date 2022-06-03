@@ -1,0 +1,50 @@
+﻿@model IEnumerable<alloment_system.DBModel.Reservation>
+
+@{
+    ViewBag.Title = "Reserveds";
+}
+
+
+<body style="background-image: url('../../images/lab5.jpg'); background-size: 100%; background-repeat: no-repeat; text-align: center;">
+    <div class="container body-content">
+        <h2 style="color:white">Reserveds</h2>
+
+
+        <table class="table" style="color: white">
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        <br><br><br>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+</body>

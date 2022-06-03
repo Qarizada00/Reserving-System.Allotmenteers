@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UserDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Branches">
+    <Key>
+      <PropertyRef Name="BranchId" />
+    </Key>
+    <Property Name="BranchId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BranchManager" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BranchAddress" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'UserDB.dbo.Notify' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Notify">
+    <Key>
+      <PropertyRef Name="User" />
+      <PropertyRef Name="Message" />
+    </Key>
+    <Property Name="User" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SHinfo">
+    <Key>
+      <PropertyRef Name="SHid" />
+    </Key>
+    <Property Name="SHid" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Surname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNO" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AppS_info">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Surname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telefone" Type="int" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OfficeNumber" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="int" Nullable="false" />
+    <Property Name="EmpName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="internship">
+    <Key>
+      <PropertyRef Name="InternsId" />
+    </Key>
+    <Property Name="InternsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InternName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="InternAge" Type="int" Nullable="false" />
+    <Property Name="InternshipEndingDate" Type="date" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobApps_">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SharedHolders">
+    <Key>
+      <PropertyRef Name="SHid" />
+    </Key>
+    <Property Name="SHid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SHname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SHage" Type="int" Nullable="false" />
+    <Property Name="SharedAmount" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Feedbacks">
+    <Key>
+      <PropertyRef Name="NameId" />
+    </Key>
+    <Property Name="NameId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="P_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="P_id" />
+    </Key>
+    <Property Name="P_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="P_image" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="P_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="P_price" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Product" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Userid" />
+    </Key>
+    <Property Name="Userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'UserDB.dbo.Categories' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Categories1">
+    <Key>
+      <PropertyRef Name="P_id" />
+      <PropertyRef Name="CategoryName" />
+      <PropertyRef Name="P_name" />
+      <PropertyRef Name="P_price" />
+    </Key>
+    <Property Name="P_id" Type="int" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="P_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="P_price" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'UserDB.dbo.EmployeeView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EmployeeView">
+    <Key>
+      <PropertyRef Name="EmpName" />
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="EmpName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="50" />
+    <Property Name="EmpId" Type="int" Nullable="false" />
+    <Property Name="OfficeNumber" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'UserDB.dbo.JobApplicants' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="JobApplicants">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Surname" />
+      <PropertyRef Name="DepartmentName" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Surname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'UserDB.dbo.SharedHolders' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SharedHolders1">
+    <Key>
+      <PropertyRef Name="SHid" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Surname" />
+      <PropertyRef Name="PhoneNO" />
+      <PropertyRef Name="SharedAmount" />
+    </Key>
+    <Property Name="SHid" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Surname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SharedAmount" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'UserDB.Employee.Internships' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Internships">
+    <Key>
+      <PropertyRef Name="Department" />
+      <PropertyRef Name="InternName" />
+      <PropertyRef Name="InternshipEndingDate" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="InternName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="InternshipEndingDate" Type="date" Nullable="false" />
+    <Property Name="OfficeNumber" Type="int" />
+  </EntityType>
+  <Function Name="Deletes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeletesUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="Get_Id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="InsertDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Department" Type="varchar" Mode="In" />
+    <Parameter Name="OfficeNumber" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmpName" Type="varchar" Mode="In" />
+    <Parameter Name="Designation" Type="varchar" Mode="In" />
+    <Parameter Name="Department" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="InsertIn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InterName" Type="varchar" Mode="In" />
+    <Parameter Name="InternAge" Type="int" Mode="In" />
+    <Parameter Name="IntershipEndingDate" Type="date" Mode="In" />
+    <Parameter Name="Department" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="InsertUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FirstName" Type="varchar" Mode="In" />
+    <Parameter Name="LastName" Type="varchar" Mode="In" />
+    <Parameter Name="Emaial" Type="varchar" Mode="In" />
+    <Parameter Name="Pass" Type="varchar" Mode="In" />
+    <Parameter Name="CreatedOn" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Pcreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="namefood" Type="nvarchar" Mode="In" />
+    <Parameter Name="restaurantname" Type="nvarchar" Mode="In" />
+    <Parameter Name="pricefood" Type="nvarchar" Mode="In" />
+    <Parameter Name="address" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectAllBranches" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectAllEmployees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectAllFeedbacks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectAllInterns" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectAllProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectAllUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="insertProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Products">
+    <Parameter Name="image" Type="varchar" Mode="In" />
+    <Parameter Name="name" Type="varchar" Mode="In" />
+    <Parameter Name="price" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="UserDBModelStoreContainer">
+    <EntitySet Name="Branches" EntityType="Self.Branches" Schema="Branches" store:Type="Tables" />
+    <EntitySet Name="SHinfo" EntityType="Self.SHinfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppS_info" EntityType="Self.AppS_info" Schema="Employee" Table="AppS.info" store:Type="Tables" />
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="Employee" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="Employee" store:Type="Tables" />
+    <EntitySet Name="internship" EntityType="Self.internship" Schema="Employee" store:Type="Tables" />
+    <EntitySet Name="JobApps_" EntityType="Self.JobApps_" Schema="Employee" Table="JobApps." store:Type="Tables" />
+    <EntitySet Name="SharedHolders" EntityType="Self.SharedHolders" Schema="Employee" store:Type="Tables" />
+    <EntitySet Name="Feedbacks" EntityType="Self.Feedbacks" Schema="Feedbacks" store:Type="Tables" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="Products" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="Products" store:Type="Tables" />
+    <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="user" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="user" store:Type="Tables" />
+    <EntitySet Name="Notify" EntityType="Self.Notify" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Notify].[User] AS [User], 
+    [Notify].[Message] AS [Message]
+    FROM [dbo].[Notify] AS [Notify]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Categories1" EntityType="Self.Categories1" store:Type="Views" store:Schema="dbo" store:Name="Categories">
+      <DefiningQuery>SELECT 
+    [Categories1].[P_id] AS [P_id], 
+    [Categories1].[CategoryName] AS [CategoryName], 
+    [Categories1].[P_name] AS [P_name], 
+    [Categories1].[P_price] AS [P_price]
+    FROM [dbo].[Categories] AS [Categories1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EmployeeView" EntityType="Self.EmployeeView" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EmployeeView].[DepartmentId] AS [DepartmentId], 
+    [EmployeeView].[EmpName] AS [EmpName], 
+    [EmployeeView].[DepartmentName] AS [DepartmentName], 
+    [EmployeeView].[EmpId] AS [EmpId], 
+    [EmployeeView].[OfficeNumber] AS [OfficeNumber]
+    FROM [dbo].[EmployeeView] AS [EmployeeView]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="JobApplicants" EntityType="Self.JobApplicants" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [JobApplicants].[Id] AS [Id], 
+    [JobApplicants].[Name] AS [Name], 
+    [JobApplicants].[Surname] AS [Surname], 
+    [JobApplicants].[DepartmentName] AS [DepartmentName]
+    FROM [dbo].[JobApplicants] AS [JobApplicants]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SharedHolders1" EntityType="Self.SharedHolders1" store:Type="Views" store:Schema="dbo" store:Name="SharedHolders">
+      <DefiningQuery>SELECT 
+    [SharedHolders1].[SHid] AS [SHid], 
+    [SharedHolders1].[Name] AS [Name], 
+    [SharedHolders1].[Surname] AS [Surname], 
+    [SharedHolders1].[PhoneNO] AS [PhoneNO], 
+    [SharedHolders1].[SharedAmount] AS [SharedAmount]
+    FROM [dbo].[SharedHolders] AS [SharedHolders1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Internships" EntityType="Self.Internships" store:Type="Views" store:Schema="Employee">
+      <DefiningQuery>SELECT 
+    [Internships].[DepartmentId] AS [DepartmentId], 
+    [Internships].[Department] AS [Department], 
+    [Internships].[InternName] AS [InternName], 
+    [Internships].[InternshipEndingDate] AS [InternshipEndingDate], 
+    [Internships].[OfficeNumber] AS [OfficeNumber]
+    FROM [Employee].[Internships] AS [Internships]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

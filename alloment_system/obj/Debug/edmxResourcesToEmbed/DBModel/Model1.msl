@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UserDBModelStoreContainer" CdmEntityContainer="UserDBEntities6">
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="UserDBModel.Branches">
+        <MappingFragment StoreEntitySet="Branches">
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="BranchManager" ColumnName="BranchManager" />
+          <ScalarProperty Name="BranchAddress" ColumnName="BranchAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHinfo">
+      <EntityTypeMapping TypeName="UserDBModel.SHinfo">
+        <MappingFragment StoreEntitySet="SHinfo">
+          <ScalarProperty Name="SHid" ColumnName="SHid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNO" ColumnName="PhoneNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppS_info">
+      <EntityTypeMapping TypeName="UserDBModel.AppS_info">
+        <MappingFragment StoreEntitySet="AppS_info">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Department">
+      <EntityTypeMapping TypeName="UserDBModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="OfficeNumber" ColumnName="OfficeNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee">
+      <EntityTypeMapping TypeName="UserDBModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="internship">
+      <EntityTypeMapping TypeName="UserDBModel.internship">
+        <MappingFragment StoreEntitySet="internship">
+          <ScalarProperty Name="InternsId" ColumnName="InternsId" />
+          <ScalarProperty Name="InternName" ColumnName="InternName" />
+          <ScalarProperty Name="InternAge" ColumnName="InternAge" />
+          <ScalarProperty Name="InternshipEndingDate" ColumnName="InternshipEndingDate" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobApps_">
+      <EntityTypeMapping TypeName="UserDBModel.JobApps_">
+        <MappingFragment StoreEntitySet="JobApps_">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SharedHolders">
+      <EntityTypeMapping TypeName="UserDBModel.SharedHolders">
+        <MappingFragment StoreEntitySet="SharedHolders">
+          <ScalarProperty Name="SHid" ColumnName="SHid" />
+          <ScalarProperty Name="SHname" ColumnName="SHname" />
+          <ScalarProperty Name="SHage" ColumnName="SHage" />
+          <ScalarProperty Name="SharedAmount" ColumnName="SharedAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Feedbacks">
+      <EntityTypeMapping TypeName="UserDBModel.Feedbacks">
+        <MappingFragment StoreEntitySet="Feedbacks">
+          <ScalarProperty Name="NameId" ColumnName="NameId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="UserDBModel.Categories">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="P_id" ColumnName="P_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="UserDBModel.Products">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="P_id" ColumnName="P_id" />
+          <ScalarProperty Name="P_image" ColumnName="P_image" />
+          <ScalarProperty Name="P_name" ColumnName="P_name" />
+          <ScalarProperty Name="P_price" ColumnName="P_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservation">
+      <EntityTypeMapping TypeName="UserDBModel.Reservation">
+        <MappingFragment StoreEntitySet="Reservation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="UserDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notify">
+      <EntityTypeMapping TypeName="UserDBModel.Notify">
+        <MappingFragment StoreEntitySet="Notify">
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories1">
+      <EntityTypeMapping TypeName="UserDBModel.Categories1">
+        <MappingFragment StoreEntitySet="Categories1">
+          <ScalarProperty Name="P_id" ColumnName="P_id" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="P_name" ColumnName="P_name" />
+          <ScalarProperty Name="P_price" ColumnName="P_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeView">
+      <EntityTypeMapping TypeName="UserDBModel.EmployeeView">
+        <MappingFragment StoreEntitySet="EmployeeView">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="OfficeNumber" ColumnName="OfficeNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobApplicants">
+      <EntityTypeMapping TypeName="UserDBModel.JobApplicants">
+        <MappingFragment StoreEntitySet="JobApplicants">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SharedHolders1">
+      <EntityTypeMapping TypeName="UserDBModel.SharedHolders1">
+        <MappingFragment StoreEntitySet="SharedHolders1">
+          <ScalarProperty Name="SHid" ColumnName="SHid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="PhoneNO" ColumnName="PhoneNO" />
+          <ScalarProperty Name="SharedAmount" ColumnName="SharedAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Internships">
+      <EntityTypeMapping TypeName="UserDBModel.Internships">
+        <MappingFragment StoreEntitySet="Internships">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="InternName" ColumnName="InternName" />
+          <ScalarProperty Name="InternshipEndingDate" ColumnName="InternshipEndingDate" />
+          <ScalarProperty Name="OfficeNumber" ColumnName="OfficeNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Deletes" FunctionName="UserDBModel.Store.Deletes" />
+    <FunctionImportMapping FunctionImportName="DeletesUser" FunctionName="UserDBModel.Store.DeletesUser" />
+    <FunctionImportMapping FunctionImportName="Get_Id" FunctionName="UserDBModel.Store.Get_Id">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UserDBModel.Get_Id_Result">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertDepartment" FunctionName="UserDBModel.Store.InsertDepartment" />
+    <FunctionImportMapping FunctionImportName="InsertEmployee" FunctionName="UserDBModel.Store.InsertEmployee" />
+    <FunctionImportMapping FunctionImportName="InsertIn" FunctionName="UserDBModel.Store.InsertIn" />
+    <FunctionImportMapping FunctionImportName="InsertUser" FunctionName="UserDBModel.Store.InsertUser" />
+    <FunctionImportMapping FunctionImportName="Pcreate" FunctionName="UserDBModel.Store.Pcreate" />
+    <FunctionImportMapping FunctionImportName="SelectAllBranches" FunctionName="UserDBModel.Store.SelectAllBranches">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UserDBModel.SelectAllBranches_Result">
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="BranchManager" ColumnName="BranchManager" />
+          <ScalarProperty Name="BranchAddress" ColumnName="BranchAddress" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectAllEmployees" FunctionName="UserDBModel.Store.SelectAllEmployees">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UserDBModel.SelectAllEmployees_Result">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectAllFeedbacks" FunctionName="UserDBModel.Store.SelectAllFeedbacks">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UserDBModel.SelectAllFeedbacks_Result">
+          <ScalarProperty Name="NameId" ColumnName="NameId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectAllInterns" FunctionName="UserDBModel.Store.SelectAllInterns">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UserDBModel.SelectAllInterns_Result">
+          <ScalarProperty Name="InternsId" ColumnName="InternsId" />
+          <ScalarProperty Name="InternName" ColumnName="InternName" />
+          <ScalarProperty Name="InternAge" ColumnName="InternAge" />
+          <ScalarProperty Name="InternshipEndingDate" ColumnName="InternshipEndingDate" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectAllProducts" FunctionName="UserDBModel.Store.SelectAllProducts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UserDBModel.SelectAllProducts_Result">
+          <ScalarProperty Name="P_id" ColumnName="P_id" />
+          <ScalarProperty Name="P_image" ColumnName="P_image" />
+          <ScalarProperty Name="P_name" ColumnName="P_name" />
+          <ScalarProperty Name="P_price" ColumnName="P_price" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectAllUsers" FunctionName="UserDBModel.Store.SelectAllUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UserDBModel.SelectAllUsers_Result">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="UserDBModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="UserDBModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="UserDBModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="UserDBModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UserDBModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="UserDBModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UserDBModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="UserDBModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="UserDBModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="insertProducts" FunctionName="UserDBModel.Store.insertProducts" />
+  </EntityContainerMapping>
+</Mapping>

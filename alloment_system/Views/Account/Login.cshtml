@@ -1,0 +1,76 @@
+﻿@model alloment_system.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+<body style="background-image: url('../../images/register.jpg'); background-size: 100%; background-repeat: no-repeat;">
+
+
+    <div class="container body-content">
+        <br><br><br><br><br><br>
+        <fieldset>
+            <legend style="color: white">
+                User Registration
+            </legend>
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+
+            {
+                <table>
+                    <tr>
+                        <td style=" color: white;">
+                            <br><br> @Html.LabelFor(mode => Model.Email)
+                        </td>
+                        <td>
+                            <br><br>  @Html.TextBoxFor(mode => Model.Email)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            @Html.ValidationMessageFor(model => model.Email, null, new { @class = "text text-danger" })
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style=" color: white;">
+                            <br><br> @Html.LabelFor(mode => Model.Password)
+                        </td>
+                        <td>
+                            <br><br>  @Html.PasswordFor(mode => Model.Password)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            @Html.ValidationMessageFor(model => model.Email, null, new { @class = "text text-danger" })
+                        </td>
+                    </tr>
+
+                    <td>
+                        <table>
+                            <td>
+                                <br><br> <input class="User" type="submit" value="Login" />
+                            </td>
+                            <td>
+                                <br><br> <input class="User" type="reset" value="Reset" />
+                            </td>
+                        </table>
+                    </td>
+
+                    <tr>
+                        <td>
+                            <br><br>   @Html.ValidationMessage("Error", null, new { @class = "text text-danger" }) <br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </td>
+                    </tr>
+
+
+
+
+
+                </table>
+            }
+        </fieldset>
+    </div>
+</body>

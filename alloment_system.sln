@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alloment_system", "alloment_system\alloment_system.csproj", "{B69E3A2F-ED38-49C4-A939-AED4A02C7307}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B69E3A2F-ED38-49C4-A939-AED4A02C7307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69E3A2F-ED38-49C4-A939-AED4A02C7307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69E3A2F-ED38-49C4-A939-AED4A02C7307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69E3A2F-ED38-49C4-A939-AED4A02C7307}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3AA63F3-FFA2-4B5E-A48B-B0F460EF2C7A}
+	EndGlobalSection
+EndGlobal

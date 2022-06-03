@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+}
+
+
+<body style="background-image: url('../../images/admin.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll">
+
+    <div class="container body-content">
+
+        <h2 style="color: white">Administration Page</h2>
+        <br><br><br><br><br><br>
+                            <div style="text-align: center">
+                                <button class="Message" style="vertical-align: middle;  text-align: center"><span>@Html.ActionLink("Employees", "Employee1", "Employee", null, null)</span></button>
+                                <button class="Message" style="vertical-align: middle;  text-align: center"><span>@Html.ActionLink("Notifications", "Notification", "Notification", null, null)</span></button>
+                                <button class="Message" style="vertical-align: middle;  text-align: center"><span> @Html.ActionLink("Users", "User", "User", null, null)</span></button><br><br><br><br><br><br>
+                                <button class="Message" style="vertical-align: middle;  text-align: center"><span> @Html.ActionLink("User Feedbacks", "Messages", "Messages", null, null)</span></button>
+                                <button class="Message" style="vertical-align: middle;  text-align: center"><span> @Html.ActionLink("Edit Products", "ItemEdit", "ItemEdit", null, null)</span></button>
+                                <button class="Message" style="vertical-align: middle;  text-align: center"><span> @Html.ActionLink("Reserved Log", "Reserveds", "Reserveds", null, null)</span></button><br><br><br><br><br><br><br><br><br><br><br><br>
+                            </div>
+        <br><br>
+        <br><br>
+        <br><br>
+    </div>
+
+</body>

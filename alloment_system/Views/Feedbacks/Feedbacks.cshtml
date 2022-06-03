@@ -1,0 +1,58 @@
+﻿
+@model alloment_system.Models.Feedbacks
+@{
+    ViewBag.Title = "Feedbacks";
+}
+
+
+<body style="background-image: url('../../images/about.jpg'); background-size: 100%; background-repeat: no-repeat; text-align: center;">
+    <div class="container body-content">
+        <br><br><br><br>
+
+
+
+
+
+        <h1 style="color: white">Would You Like To Have A Cup Of Coffee With Us?</h1>
+        <br><br><br><br>
+        <h3 style="color: white">Call Us, Reach Us, Teach Us.</h3>
+
+        <address style="color: white; font-size: larger">
+            One Microsoft Way<br />
+            Redmond, WA 98052-6399<br />
+            <abbr title="Phone">P:</abbr>
+            425.555.0100
+        </address>
+        <br><br><br><br><br><br><br>
+                                <address style="color: white;">
+                                    <strong style="font-size: large; ">Support:</strong>   <a href="mailto:Support@example.com">Allotmenteers@gmail.com</a><br />
+                                    <strong style="font-size: large; ">Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@Allotmenteers.com</a><br />
+
+                                    <br><br><br><br>
+                                    <h2 style="color: white;">Wait, Have You got Any Idea To Share?</h2>
+                                    <br><br>
+
+
+
+                                    <div class="container">
+                                        <div class="subscribe-form">
+                                            <form action="/Feedbacks/Feedbacks" method="post">
+                                                <label>
+                                                    Email
+                                                </label>
+                                                <input style="color: black; " type="text" name="Email">
+                                                <label>
+                                                    Message
+                                                </label>
+                                                <input style="color: black" ; type="text" name="Message">
+                                                <input style="background-color: gray;" type="submit" value="submit">
+                                            
+                                            </form>
+
+                                        </div>
+                                    </div>
+
+                                </address>
+    </div>
+</body>
+

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<alloment_system.DBModel.EmployeeView>
+
+@{
+    ViewBag.Title = "Employee1";
+}
+
+
+<body style="background-image: url('../../images/contacts.jpg'); background-size: 100%; background-repeat: no-repeat; color: white">
+    <div class="container body-content">
+        <h2>Employees</h2>
+
+
+
+    
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmpName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepartmentId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepartmentName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OfficeNumber)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmpName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DepartmentId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DepartmentName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OfficeNumber)
+                    </td>
+                    <td><br><br><br></td>
+               
+                </tr>
+            }
+
+        </table>
+
+    </div>
+
+</body>

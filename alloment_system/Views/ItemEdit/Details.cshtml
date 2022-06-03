@@ -1,0 +1,52 @@
+﻿@model alloment_system.DBModel.Products
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<body style="background-image: url('../../images/pro.jpg'); background-size: auto; background-repeat: no-repeat; text-align: center; color:white">
+    <div class="container body-content">
+        <h2>Details</h2>
+
+        <div>
+
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.P_image)<br><br><br>
+                </dt>
+
+                <dd>
+                    <img src="@Url.Content(Model.P_image)" height="400"><br><br><br>
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.P_name)<br><br><br>
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.P_name)<br><br><br>
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.P_price)<br><br><br>
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.P_price)<br><br><br>
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            <button class="User" style="vertical-align: middle;  text-align: center"><span>@Html.ActionLink("Back To List", "ItemEdit", "ItemEdit")</span></button>
+            <button class="User" style="vertical-align: middle;  text-align: center"><span>@Html.ActionLink("Edit", "Edit", new { id = Model.P_id })</span></button>
+
+
+        </p>
+
+
+    </div>
+    </body>
+
+

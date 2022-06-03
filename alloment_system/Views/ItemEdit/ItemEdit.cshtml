@@ -1,0 +1,58 @@
+﻿@model IEnumerable<alloment_system.DBModel.Products>
+
+@{
+    ViewBag.Title = "Item Edit";
+}
+
+<body style="background-image: url('../../images/pro.jpg'); background-size: auto; background-repeat: no-repeat; text-align: center; color:white">
+
+    <div class="container body-content">
+        <h2>Edit Products</h2>
+
+        <p>
+            <button class="User" style="vertical-align: middle;  text-align: center"><span> @Html.ActionLink("Create New", "Create") </span></button>
+
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_image)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_price)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="@Url.Content(item.P_image)" height="100">
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.P_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.P_price)
+                    </td>
+                    <td>
+
+                        <button class="User" style="vertical-align: middle;  text-align: center"><span> @Html.ActionLink("Edit", "Edit", new { id = item.P_id }) |</span></button>
+
+                        <button class="User" style="vertical-align: middle;  text-align: center"><span> @Html.ActionLink("Details", "Details", new { id = item.P_id }) |</span></button>
+
+                        <button class="User" style="vertical-align: middle;  text-align: center"><span> @Html.ActionLink("Delete", "Delete", new { id = item.P_id }) |</span></button>
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+    </body>
